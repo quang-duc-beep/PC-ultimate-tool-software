@@ -3,7 +3,7 @@ import { Home, Cpu, MemoryStick, HardDrive, Info } from 'lucide-vue-next'
 import { useSysInfo } from '../composables/useSysInfo'
 import InfoCard from '../components/InfoCard.vue' // Import component dùng chung
 
-const { sysInfo, formatUptime, bytesToGB } = useSysInfo()
+const { wmiDisk ,sysInfo, formatUptime, bytesToGB } = useSysInfo()
 </script>
 
 <template>
@@ -29,7 +29,7 @@ const { sysInfo, formatUptime, bytesToGB } = useSysInfo()
 
       <!-- Card Disk -->
       <InfoCard title="Disk" :icon="HardDrive">
-        <p class="hover:translate-x-1 transition-transform"><span class="font-semibold">Name disk:</span> {{ sysInfo?.disk_name ?? '....' }}</p>
+        <p class="hover:translate-x-1 transition-transform"><span class="font-semibold">Model disk:</span> {{ sysInfo?.disk_kind ?? '....' }}</p>
         <p class="hover:translate-x-1 transition-transform"><span class="font-semibold">Free space:</span> {{ sysInfo?.free_space?.toFixed(1) ?? '---' }} GB</p>
         <p class="hover:translate-x-1 transition-transform"><span class="font-semibold">Space used:</span> {{ sysInfo?.space_used?.toFixed(1) ?? '---' }} GB</p>
       </InfoCard>

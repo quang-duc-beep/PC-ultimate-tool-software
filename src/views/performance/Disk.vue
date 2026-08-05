@@ -2,7 +2,7 @@
 import { HardDrive } from 'lucide-vue-next'
 import { useSysInfo } from '../../composables/useSysInfo'
 
-const { sysInfo } = useSysInfo()
+const { sysInfo, wmiDisk } = useSysInfo()
 </script>
 
 <template>
@@ -20,10 +20,12 @@ const { sysInfo } = useSysInfo()
       </span>
     </div>
 
-    <div class="space-y-4 text-slate-700 text-lg">
-      <p class="hover:translate-x-2 transition-transform duration-200"><span class="font-bold">Disk name:</span> {{ sysInfo?.disk_name ?? '...' }}</p>
-      <p class="hover:translate-x-2 transition-transform duration-200"><span class="font-bold">Free space:</span> {{ sysInfo?.free_space?.toFixed(1) ?? '---' }}GB</p>
-      <p class="hover:translate-x-2 transition-transform duration-200"><span class="font-bold">Space used:</span> {{ sysInfo?.space_used?.toFixed(1) ?? '---' }}GB</p>
+    <div class="grid grid-cols-2 gap-x-12 gap-y-6 text-slate-700 text-lg">
+      <p class="hover:text-blue-600 transition-colors"><span class="font-bold">Model disk name:</span> {{ wmiDisk[0]?.model ?? 'N/A' }}</p>
+      <p class="hover:text-blue-600 transition-colors"><span class="font-bold">Total disk:</span> {{ wmiDisk[0]?.size_gb ?? '---' }}GB</p>
+
+      <p class="hover:text-blue-600 transition-colors"><span class="font-bold">Space used:</span> {{ sysInfo?.space_used?.toFixed(1) ?? '---' }}GB</p>
+      <p class="hover:text-blue-600 transition-colors"><span class="font-bold">Model disk:</span> {{sysInfo?.disk_kind ?? '...' }}</p>
     </div>
   </div>
 </template>

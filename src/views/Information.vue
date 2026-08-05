@@ -2,7 +2,7 @@
 import { Info } from 'lucide-vue-next'
 import { useSysInfo } from '../composables/useSysInfo'
 
-const { sysInfo } = useSysInfo()
+const { sysInfo, wmiDisk } = useSysInfo()
 </script>
 
 <template>
@@ -16,8 +16,8 @@ const { sysInfo } = useSysInfo()
       <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Name PC:</span> {{ sysInfo?.name_pc ?? '....' }}</p>
       <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Sys Manufacturer:</span> N/A</p>
       <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">System Type:</span> {{ sysInfo?.sys_type ?? '...' }}</p>
-      <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Disk name:</span> {{ sysInfo?.disk_name ?? '...' }}</p>
-      <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Disk space:</span> {{ sysInfo?.free_space?.toFixed(1) ?? '---' }}GB</p>
+      <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Disk name:</span> {{ wmiDisk[0]?.model ?? '...' }}</p>
+      <p class="flex items-center group"><span class="font-bold w-48 group-hover:text-blue-600 transition-colors">Disk space:</span> {{ wmiDisk[0]?.size_gb ?? '---' }}GB</p>
     </div>
 
     <div class="mt-auto pb-10 flex justify-center text-slate-400 font-medium text-lg hover:text-slate-600 transition-colors duration-300">

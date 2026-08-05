@@ -3,6 +3,7 @@ import { invoke } from '@tauri-apps/api/core' // Dùng cho Tauri v2
 
 export function useSysInfo() {
   const sysInfo = ref(null)
+  const wmiDisk = ref([])
   let interval = null
 
   const fetchInfo = async () => {
@@ -13,8 +14,22 @@ export function useSysInfo() {
     }
   }
 
+  const wmiConsInfo = async () => {
+    try {
+      // 1. Phải khai báo const res = ở đây
+      const res = await invoke('disk_wmi')
+    
+      // 2. Lúc này mới dùng res để log hoặc gán
+      console.log('Dữ liệu WMI nhận được:', res)
+      wmiDisk.value = res
+    } catch (error) {
+      console.error('Lỗi khi gọi Rust disk:', error)
+    }
+}
+
   onMounted(() => {
     fetchInfo()
+    wmiConsInfo()
     interval = setInterval(fetchInfo, 1000) // Cập nhật mỗi 1 giây
   })
 
@@ -37,5 +52,5 @@ export function useSysInfo() {
     return (bytes / (1024 ** 3)).toFixed(1)
   }
 
-  return { sysInfo, formatUptime, bytesToGB }
+  return { wmiDisk, sysInfo, formatUptime, bytesToGB, wmiConsInfo }
 }
