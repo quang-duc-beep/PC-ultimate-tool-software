@@ -49,12 +49,20 @@ Phần mềm được thiết kế với menu điều hướng bên trái, bao g
 <img width="1253" height="922" alt="image" src="https://github.com/user-attachments/assets/c1849703-e0ec-4700-aca9-63956004cbc0" />
 
 
-*Disk:*  
+*Disk:* - đã cập nhật, sửa lỗi...
+- Ban đầu:
 <img width="1261" height="925" alt="image" src="https://github.com/user-attachments/assets/b1e43c08-ce77-499f-8d15-aa0469a96ca7" />
 
+- Sau cập nhật:
+<img width="1257" height="911" alt="image" src="https://github.com/user-attachments/assets/6994bbb1-2e04-4258-942a-63b5397d2778" />
 
-**Giao diện Thông tin hệ thống (Information)**  
+
+**Giao diện Thông tin hệ thống (Information)**  - đã cập nhật, sửa lỗi...
+- Ban đầu:
 <img width="1262" height="918" alt="image" src="https://github.com/user-attachments/assets/5b93dcf9-1a40-4f0f-ad43-3eaafe358944" />
+
+- Sau cập nhật:
+<img width="1248" height="917" alt="image" src="https://github.com/user-attachments/assets/0908dfd6-8929-46c2-8495-9c542070a806" />
 
 
 ## Quá trình xây dựng
@@ -81,14 +89,13 @@ Phần mềm được thiết kế với menu điều hướng bên trái, bao g
 
 **Cập nhật sắp tới:**
 * Sửa lại các tính năng và sai số, lỗi...
-* cập nhật các tính năng còn lại...
 * Thêm một tính năng mới sắp tới...
 
 ## Phiên bản
-- **Phiên bản hiện tại**: 0.1.0
-- **ID Software**: 0.1.0-AVFSofw@re-PUTS
-- **Tải về**: [click here](https://github.com/quang-duc-beep/PC-ultimate-tool-software/releases/download/0.1.0/pc-ultimate-tool-app_0.1.0_x64_en-US.msi)
-(c)
+- **Phiên bản hiện tại**: 0.1.1
+- **ID Software**: 0.1.1-AVFSofw@re-PUTS
+- **Tải về**: [click here](https://github.com/quang-duc-beep/PC-ultimate-tool-software/releases/download/0.1.1/pc-ultimate-tool-app_0.1.1_x64_en-US.msi)
+* (c)copyright 2026 - AVFSofware 
 
 ## Liên hệ ý kiến
 - **Email**: ducps125@gmail.com
